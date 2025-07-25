@@ -1,0 +1,29 @@
+name: Backend CI/CD
+
+on:
+  push:
+    paths:
+      - 'backend/**'
+      - 'docker-compose.yml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install Dependencies
+      run: |
+        cd backend
+        npm install
+
+    - name: Run Backend Lint or Tests
+      run: |
+        echo "Backend running basic CI – No test suite yet."
