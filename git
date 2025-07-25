@@ -1,0 +1,7 @@
+cd path/to/BeginOfKingdomsWar
+git init
+git remote add origin https://github.com/romeo380/BeginOfKingdomsWar.git
+git add .
+git commit -m "Initial commit: Unity + Node + Docker setup"
+git branch -M main
+git push -u origin main
